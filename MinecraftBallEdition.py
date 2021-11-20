@@ -1,4 +1,3 @@
-
 from ursina import *
 from ursina.prefabs.\
   first_person_controller \
@@ -42,6 +41,10 @@ def input(key):
       if key == 'right mouse down':
         boxes.remove(box)
         destroy(box)
+
+def input(key):
+    if key == 'q':
+         quit()
 
 sword = Entity(model='assets\\blade', texture='assets\sword', rotation=(30,-40),
                position=(0.35,-0.6), parent=camera.ui, scale=(0.2,0.15))
